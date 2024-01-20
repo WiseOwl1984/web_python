@@ -1,22 +1,16 @@
-# функция декоратор
+# функция - декоратор - обычная функция 
 def dec(f_arg):
-    #функция обертка
     def wrapper():
-        # доп. функциональность 1
-        print("before")
-        # вызов целевой функции
+        # доп функциональность №1
+        print("Before")
         f_arg()
-        # доп. функциональность 2
-        print("after")
-    return wrapper
-# новый синтаксис 
-@dec    
-# целевая функция
-def func():
-    print("hello!")
+        # доп функциональность №2
+        print ("After")
+    return wrapper  
 
-# старый синтаксис 
-func = dec(func)
+# целевая функция 
+@dec
+def funk_1():
+    print("hello")
 
-# вызов функции 
-func()     
+funk_1()    
